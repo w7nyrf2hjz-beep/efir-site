@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>ЭФИР — Инструкция</title>
+<style>
+  body { font-family: Arial, sans-serif; background: #09090b; color: #fff; margin: 0; padding: 20px; }
+  .container { max-width: 700px; margin: 0 auto; }
+  h1 { color: #f59e0b; font-size: 28px; }
+  h2 { color: #f59e0b; font-size: 18px; margin-top: 30px; }
+  .step { background: #18181b; border: 1px solid #3f3f46; border-radius: 12px; padding: 16px; margin: 10px 0; }
+  .step-num { background: #f59e0b; color: #000; border-radius: 50%; width: 28px; height: 28px; 
+               display: inline-flex; align-items: center; justify-content: center; 
+               font-weight: bold; margin-right: 10px; }
+  .btn { display: inline-block; background: #f59e0b; color: #000; padding: 12px 24px; 
+         border-radius: 10px; text-decoration: none; font-weight: bold; margin: 5px; }
+  .code { background: #000; color: #f59e0b; padding: 10px 16px; border-radius: 8px; 
+          font-family: monospace; font-size: 16px; display: inline-block; margin: 8px 0; }
+  .warn { background: #1c1008; border: 1px solid #f59e0b; border-radius: 8px; padding: 12px; margin: 10px 0; }
+  .ok { color: #4ade80; }
+  .red { color: #f87171; }
+  p { color: #a1a1aa; line-height: 1.6; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>🍽️ ЭФИР — Инструкция по запуску</h1>
+
+  <h2>Шаг 1 — Установить Node.js (один раз)</h2>
+  <div class="step">
+    <p>Node.js — это программа, которая запускает сайт на вашем компьютере.</p>
+    <a class="btn" href="https://nodejs.org/en/download" target="_blank">📥 Скачать Node.js</a>
+    <p>Нажмите кнопку выше → скачайте файл → установите как обычную программу → <strong class="ok">перезагрузите компьютер</strong></p>
+  </div>
+
+  <h2>Шаг 2 — Запустить сайт</h2>
+  <div class="step">
+    <p><span class="step-num">1</span> Найдите файл <strong style="color:#f59e0b">START_WINDOWS.bat</strong> в этой папке</p>
+    <p><span class="step-num">2</span> Сделайте <strong>двойной клик</strong> по нему</p>
+    <p><span class="step-num">3</span> Если появится предупреждение Windows — нажмите <strong>"Подробнее"</strong> → <strong>"Выполнить в любом случае"</strong></p>
+    <p><span class="step-num">4</span> Откроется чёрное окно — <strong class="red">не закрывайте его!</strong> Там работает сайт</p>
+    <p><span class="step-num">5</span> Через ~30 секунд браузер откроется сам</p>
+  </div>
+
+  <h2>Как войти в панель администратора</h2>
+  <div class="step">
+    <p><span class="step-num">1</span> Откройте в браузере: <a class="btn" href="http://localhost:3000/auth" target="_blank">Войти на сайт</a></p>
+    <p><span class="step-num">2</span> Введите номер телефона:</p>
+    <div class="code">+77001234567</div>
+    <p><span class="step-num">3</span> Нажмите "Получить код"</p>
+    <p><span class="step-num">4</span> Переключитесь в чёрное окно — там будет строка:</p>
+    <div class="code">[SMS DEV] Код для +77001234567: 123456</div>
+    <p><span class="step-num">5</span> Введите 6-значный код на сайте</p>
+    <p><span class="step-num">6</span> Готово! Панель администратора: <a class="btn" href="http://localhost:3000/admin" target="_blank">Открыть админку</a></p>
+  </div>
+
+  <h2>Если что-то не работает</h2>
+  <div class="step">
+    <div class="warn">
+      <strong>Браузер показывает "Сайт недоступен":</strong>
+      <p>→ Подождите ещё 30-60 секунд — сайт ещё загружается<br>
+         → Убедитесь что чёрное окно открыто и не показывает ошибок<br>
+         → Попробуйте открыть вручную: <a href="http://localhost:3000" style="color:#f59e0b">http://localhost:3000</a></p>
+    </div>
+    <div class="warn">
+      <strong>Чёрное окно сразу закрывается:</strong>
+      <p>→ Node.js не установлен или нужна перезагрузка компьютера</p>
+    </div>
+    <div class="warn">
+      <strong>Долго устанавливается (первый раз):</strong>
+      <p>→ Это нормально! Первый запуск — 5-10 минут. Следующие — 10 секунд.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>
